@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Block Throwing Game</title>
+    <style>
+        :root {
+            --background-color: #ffffff;
+            --main-text-color: #000000;
+        }
+
+        body {
+            height: 100vh;
+            background: var(--background-color);
+            margin: 0;
+            color: var(--main-text-color);
+            position: relative;
+        }
+
+        canvas {
+            display: block;
+        }
+
+        .message {
+            padding: 10px 40px;
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <script type="importmap">
+        {
+          "imports": {
+            "three": "https://unpkg.com/three@0.164.0/build/three.module",
+            "three/addons/": "https://unpkg.com/three@0.164.0/examples/jsm/"
+          }
+        }
+      </script>
+
+    <div class="message">
+        <p>Click to launch the sphere</p>
+    </div>
+    <script type="module" src="game.js"></script>
+</body>
+
+</html>
