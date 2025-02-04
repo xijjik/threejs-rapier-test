@@ -71,7 +71,7 @@ async function init() {
             const box = new THREE.Box3().setFromObject(model)
             const size = box.getSize(new THREE.Vector3())
 
-            const physicsBox = new THREE.Mesh(new THREE.BoxGeometry(size.x, size.y, size.z), new THREE.MeshBasicMaterial({ visible: false }))
+            const physicsBox = new THREE.Mesh(new THREE.BoxGeometry(size.x * 1.5, size.y, size.z * 1.5), new THREE.MeshBasicMaterial({ visible: false }))
             physicsBox.position.copy(model.position)
             physicsBox.position.y += size.y / 2
             model.position.y += size.y / 2
